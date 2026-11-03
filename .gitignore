@@ -1,0 +1,26 @@
+# Ambiente Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Credenciais e variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Dados brutos, tratados e exportados
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/exports/*
+!data/exports/.gitkeep
+
+# Arquivos temporários
+*.log
+.DS_Store
