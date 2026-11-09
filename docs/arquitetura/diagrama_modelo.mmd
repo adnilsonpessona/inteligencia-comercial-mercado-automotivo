@@ -1,0 +1,58 @@
+erDiagram
+
+    dim_calendario {
+        date competencia PK
+        smallint ano
+        smallint mes
+        varchar(20) nome_mes
+        varchar(10) mes_abreviado
+        smallint trimestre
+        smallint semestre
+        varchar(7) ano_mes
+    }
+
+    dim_uf {
+        integer id_uf PK
+        varchar(2) sigla_uf
+        varchar(50) nome_uf
+        varchar(30) regiao
+    }
+
+    dim_tipo_veiculo {
+        smallint id_tipo_veiculo PK
+        varchar(50) tipo_veiculo
+    }
+
+    dim_especie_veiculo {
+        smallint id_especie_veiculo PK
+        varchar(50) especie_veiculo
+    }
+
+    fato_frota {
+        date data_referencia FK PK
+        integer id_uf FK PK
+        varchar(100) municipio PK
+        varchar(20) eixos PK
+        bigint qtd_veiculos
+        smallint id_tipo_veiculo FK PK
+        smallint id_especie_veiculo FK PK
+    }
+
+    fato_emplacamentos {
+        date competencia FK PK
+        varchar(30) categoria PK
+        bigint emplacamentos_mes
+        bigint emplacamentos_mes_anterior
+        bigint emplacamentos_acumulados
+        bigint emplacamentos_mes_ano_anterior
+        bigint emplacamentos_acumulados_ano_anterior
+        numeric variacao_mensal_pct
+        numeric variacao_anual_pct
+        numeric variacao_acumulada_pct
+    }
+
+    dim_calendario ||--o{ fato_frota : "data_referencia"
+    dim_uf ||--o{ fato_frota : "UF"
+    dim_tipo_veiculo ||--o{ fato_frota : "tipo"
+    dim_especie_veiculo ||--o{ fato_frota : "especie"
+    dim_calendario ||--o{ fato_emplacamentos : "competencia"

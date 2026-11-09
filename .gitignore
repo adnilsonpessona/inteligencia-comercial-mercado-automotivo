@@ -24,3 +24,17 @@ data/exports/*
 # Arquivos temporários
 *.log
 .DS_Store
+
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# Jupyter - arquivos temporários
+*.ipynb_checkpoints
+
+# PostgreSQL - backups e dumps
+*.dump
+*.backup
+*.sql.gz
+*.tar
