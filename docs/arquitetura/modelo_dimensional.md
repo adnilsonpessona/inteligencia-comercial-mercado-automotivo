@@ -11,7 +11,7 @@ O modelo integra duas fontes oficiais:
 - **FENABRAVE:** informações mensais sobre o fluxo de emplacamentos.
 
 A estrutura foi projetada para permitir análises comerciais do mercado
-brasileiro de automóveis e comerciais leves, com posterior consumo no Power BI.
+brasileiro de automóveis e comerciais leves, com consumo na camada analítica e nos dashboards desenvolvidos no Metabase.
 
 ## 2. Escopo analítico
 
@@ -46,7 +46,7 @@ e região.
 
 O município permanece armazenado na tabela fato da SENATRAN para
 preservar a granularidade e a rastreabilidade da fonte, mas não será
-utilizado como dimensão de análise na primeira versão do Power BI.
+utilizado como dimensão de análise na primeira versão dos dashboards.
 
 ## 3. Arquitetura
 
@@ -147,7 +147,7 @@ Todos os relacionamentos são do tipo um-para-muitos (1:*).
 
 A dimensão ocupa o lado 1 e a tabela fato ocupa o lado muitos.
 
-As chaves estrangeiras garantem a integridade referencial no PostgreSQL. Na camada semântica do Power BI, recomenda-se configurar os relacionamentos com direção de filtro unidirecional, da dimensão para a tabela fato.
+As chaves estrangeiras garantem a integridade referencial no PostgreSQL. Como as relações e agregações são implementadas no PostgreSQL, os dashboards do Metabase devem consumir as views analíticas e evitar junções diretas entre tabelas fato.
 
 Não devem ser criados relacionamentos diretos entre as duas tabelas fato.
 
@@ -201,9 +201,9 @@ As restrições físicas incluem chaves primárias, estrangeiras, unicidade, obr
 
 Uma anomalia identificada no atributo `eixos` em fevereiro de 2026 foi documentada e preservada, sem correção arbitrária dos dados de origem.
 
-## 8. Orientações para o modelo semântico Power BI
+## 8. Orientações para consumo no Metabase
 
-Na construção do modelo semântico:
+Na configuração das perguntas e dashboards no Metabase:
 
 1. Manter as duas tabelas fato separadas.
 2. Relacionar cada fato às dimensões correspondentes.
