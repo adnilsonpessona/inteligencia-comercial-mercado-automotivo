@@ -67,17 +67,25 @@ A versão atual contempla quatro dashboards no Metabase:
 
 Apresenta os principais indicadores nacionais e a evolução mensal da frota e dos emplacamentos.
 
+![Visão Executiva — Mercado Automotivo Brasileiro](docs/images/visao-executiva.png)
+
 ### 2. Inteligência Geográfica
 
 Explora a distribuição da frota por Unidade da Federação e por região, incluindo ranking estadual e participação regional.
+
+![Inteligência Geográfica — Mercado Automotivo Brasileiro](docs/images/inteligencia-geografica.png)
 
 ### 3. Perfil da Frota
 
 Apresenta a composição da frota por tipo e espécie de veículo, com foco na participação de cada categoria.
 
+![Perfil da Frota — Mercado Automotivo Brasileiro](docs/images/perfil-da-frota.png)
+
 ### 4. Tendências de Mercado
 
 Compara os emplacamentos de 2025 e 2026 por mês e apresenta indicadores de variação anual da frota e dos emplacamentos.
+
+![Tendências de Mercado — Mercado Automotivo Brasileiro](docs/images/tendencias-de-mercado.png)
 
 Os dashboards são atualizados conforme a disponibilidade das competências e a atualização das bases utilizadas no projeto.
 
@@ -117,6 +125,11 @@ As regras, resultados e limitações conhecidos estão registrados nos documento
 │   │   ├── camada_analitica.md
 │   │   ├── diagrama_modelo.mmd
 │   │   └── modelo_dimensional.md
+│   ├── images/
+│   │   ├── inteligencia-geografica.png
+│   │   ├── perfil-da-frota.png
+│   │   ├── tendencias-de-mercado.png
+│   │   └── visao-executiva.png
 │   └── qualidade/
 │       └── auditoria_fenabrave.md
 ├── notebooks/
@@ -153,7 +166,6 @@ Os notebooks apoiam as etapas de inspeção e validação. A camada analítica d
 
 ## Próximas evoluções
 
-- Disponibilizar imagens dos dashboards no repositório para facilitar a visualização por quem visita o portfólio.
 - Consolidar instruções de configuração e reprodução do banco e das consultas.
 - Automatizar e documentar rotinas de extração, transformação e carga.
 - Avaliar a ampliação do histórico e de novos recortes analíticos conforme a disponibilidade das fontes.
