@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-A camada analítica do projeto organiza os dados tratados no PostgreSQL em views destinadas à análise de negócio e à integração com o Power BI.
+A camada analítica do projeto organiza os dados tratados no PostgreSQL em views destinadas à análise de negócio e ao consumo pelos dashboards do Metabase.
 
 Seu objetivo é disponibilizar indicadores consistentes sobre:
 
@@ -248,7 +248,7 @@ Resultado: 10 de 10 verificações aprovadas.
 
 As duas views reproduzem integralmente os resultados das análises realizadas anteriormente no notebook.
 
-## 7. Orientações para o Power BI
+## 7. Orientações para o Metabase
 
 - Utilizar as views do schema `analytics` como fontes para os relatórios.
 - Priorizar as views agregadas conforme a pergunta analítica.
@@ -259,7 +259,7 @@ As duas views reproduzem integralmente os resultados das análises realizadas an
 - Preservar a distinção entre estoque de frota e fluxo de emplacamentos.
 - Tratar valores nulos interanuais de 2025 como ausência de base histórica, e não como zero.
 
-A conexão será realizada ao PostgreSQL instalado no Fedora, quando o ambiente estiver acessível a partir do Windows, onde será utilizado o Power BI Desktop.
+O Metabase conecta-se ao PostgreSQL e utiliza as views do schema `analytics` como fontes para perguntas, gráficos e dashboards. As consultas e agregações principais permanecem centralizadas no banco.
 
 ## 8. Artefatos relacionados
 
