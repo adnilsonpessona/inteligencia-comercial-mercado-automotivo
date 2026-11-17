@@ -16,6 +16,25 @@ load_dotenv(PROJECT_ROOT / ".env")
 def criar_engine():
     """Cria e retorna uma conexão com o PostgreSQL."""
 
+    variaveis_obrigatorias = [
+        "DB_USER",
+        "DB_PASSWORD",
+        "DB_HOST",
+        "DB_NAME",
+    ]
+
+    ausentes = [
+        variavel
+        for variavel in variaveis_obrigatorias
+        if not os.getenv(variavel)
+    ]
+
+    if ausentes:
+        raise ValueError(
+            "Variáveis de ambiente ausentes: "
+            + ", ".join(ausentes)
+        )
+
     url = URL.create(
         drivername="postgresql+psycopg",
         username=os.getenv("DB_USER"),
