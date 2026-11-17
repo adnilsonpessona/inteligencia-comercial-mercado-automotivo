@@ -92,7 +92,7 @@ Foram aprovadas as nove verificações:
 
 A reconciliação mensal apresentou diferença zero entre a soma dos quatro tipos e a frota nacional nas 21 competências.
 
-## 8. Recomendações para o Power BI
+## 8. Orientações para dashboards no Metabase
 
 A análise pode alimentar:
 
