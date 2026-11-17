@@ -144,7 +144,7 @@ Nenhum dos dois indicadores deve ser denominado volume de emplacamentos.
   diferença decorrente do arredondamento.
 - As verificações de consistência foram aprovadas.
 
-## 8. Orientações para o Power BI
+## 8. Orientações para dashboards no Metabase
 
 Indicadores recomendados:
 
