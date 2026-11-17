@@ -126,7 +126,7 @@ O crescimento nacional foi de 3,61% entre setembro de 2025 e setembro de 2026.
 
 Não existe divergência entre a análise geográfica e a nacional. A diferença decorre exclusivamente dos registros classificados como SI.
 
-## 8. Regras para utilização no Power BI
+## 8. Regras para utilização no Metabase
 
 1. Utilizar `analytics.vw_frota_uf_mensal` como fonte da análise por UF.
 2. Excluir SI dos gráficos de participação estadual e regional.
