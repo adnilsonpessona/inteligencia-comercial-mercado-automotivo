@@ -115,11 +115,13 @@ As regras, resultados e limitações conhecidos estão registrados nos documento
 
 ```text
 .
+├── .env.example
 ├── data/
 │   ├── raw/
 │   ├── processed/
 │   └── exports/
 ├── docs/
+│   ├── configuracao_reproducao.md
 │   ├── analises/
 │   ├── arquitetura/
 │   │   ├── camada_analitica.md
