@@ -143,9 +143,9 @@ As regras, resultados e limitações conhecidos estão registrados nos documento
 └── README.md
 ```
 
-Os diretórios de dados estão versionados como estrutura de projeto; os arquivos brutos não são incluídos neste repositório. Consulte as fontes oficiais para obter os dados originais.
+Os diretórios de dados estão versionados como estrutura de projeto; os arquivos brutos não são incluídos neste repositório. Consulte as fontes oficiais para obter os dados originais. O repositório também não inclui backup PostgreSQL nem scripts completos para reconstruir automaticamente a base; essa limitação está detalhada no [guia de configuração e reprodução](docs/configuracao_reproducao.md).
 
-## Como preparar o ambiente Python
+## Configuração e reprodução\n\nConsulte o [guia de configuração e reprodução](docs/configuracao_reproducao.md) para preparar o ambiente, configurar a conexão PostgreSQL e conhecer as limitações de reprodução desta versão. O arquivo `.env.example` apresenta os nomes das variáveis necessárias; copie-o para `.env` e preencha suas credenciais localmente. Nunca publique o `.env`.\n\n## Como preparar o ambiente Python
 
 Recomenda-se criar um ambiente virtual e instalar as dependências listadas em `requirements.txt`:
 
@@ -167,7 +167,7 @@ Os notebooks apoiam as etapas de inspeção e validação. A camada analítica d
 ## Próximas evoluções
 
 - Consolidar instruções de configuração e reprodução do banco e das consultas.
-- Automatizar e documentar rotinas de extração, transformação e carga.
+- Implementar e automatizar rotinas de extração, transformação e carga.
 - Avaliar a ampliação do histórico e de novos recortes analíticos conforme a disponibilidade das fontes.
 
 ## Sobre o projeto
